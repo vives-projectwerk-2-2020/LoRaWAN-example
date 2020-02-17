@@ -15,20 +15,20 @@ int main(void)
   pc.printf("\r\n*** Starting LoRaWAN Shield Example ***\r\n");
   
   int device_id =  0x01;
-  int temperature = 0x8D8; // 22 64
-  int humidity = 0x2710; // decimal 100 00
-  int pressure = 0x6D;
-  int pm25 = 0x67;
-  int pm10 = 0x91;
+  double temperature = 22.64; // 22 64
+  double humidity = 95.50; // it was a rainy day
+  double pressure = 15.64;
+  int pm25 = 999;
+  int pm10 = 245;
 
   while(true) {
     LoRaMessage message;
     message.addUint16(device_id);
-    message.addUint16(temperature);
-    message.addUint16(humidity);
-    message.addUint16(pressure);
-    message.addUint16(pm25);
-    message.addUint16(pm10);
+    message.addTemperature(temperature);
+    message.addHumidity(humidity);
+    message.addPressure(pressure);
+    message.addPM(pm25);
+    message.addPM(pm10);
 
     node.send(message.getMessage(), message.getLength());
     //pc.printf("Message sent. counter: %d\r\n", counter);
