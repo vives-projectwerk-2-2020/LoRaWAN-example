@@ -3,11 +3,9 @@
 #include "LoRaMessage.h"
 #include "settings.h"
 
-using namespace SimpleLoRaWAN;
-
 Serial pc(USBTX, USBRX, 115200);
 
-Node node(keys, pins);
+SimpleLoRaWAN::Node node(keys, pins);
 
 int main(void)
 {
