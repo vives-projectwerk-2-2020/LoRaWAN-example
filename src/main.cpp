@@ -15,8 +15,8 @@ int main(void)
   pc.printf("\r\n*** Starting LoRaWAN Shield Example ***\r\n");
   
   int device_id =  0x01;
-  double temperature = 22.64; // 22 64
-  double humidity = 95.50; // it was a rainy day
+  double temperature = 22.64;
+  double humidity = 95.50;
   double pressure = 15.64;
   int pm25 = 999;
   int pm10 = 245;
