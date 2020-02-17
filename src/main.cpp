@@ -29,7 +29,6 @@ int main(void)
     message.addPM(pm10);
 
     node.send(message.getMessage(), message.getLength());
-    //pc.printf("Message sent. counter: %d\r\n", counter);
     wait(30.0);
   }
 }

@@ -2,7 +2,7 @@ mbed_settings.py
 mbed_settings.pyc
 ./mbed-lorawan-serialization/
 ./mbed-os/
-./mbed-Simple-LoRaWAN
+./mbed-Simple-LoRaWAN/
 
 BUILD/
 
