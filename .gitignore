@@ -1,6 +1,7 @@
 mbed_settings.py
 mbed_settings.pyc
 mbed-lorawan-serialization/
+mbed-lorawan-extended-serialize/
 mbed-os/
 mbed-Simple-LoRaWAN/
 

@@ -1,6 +1,9 @@
+#pragma once
+
 #include "mbed.h"
 #include "Simple-LoRaWAN.h"
-#include "LoRaMessage.h"
+// #include "LoRaMessage.h"
+#include "ExtendedLoRaMessage.h"
 #include "settings.h"
 
 Serial pc(USBTX, USBRX, 115200);
@@ -20,7 +23,8 @@ int main(void)
   int pm10 = 245;
 
   while(true) {
-    LoRaMessage message;
+    // LoRaMessage message;
+    ExtendedLoRaMessage message;
     message.addUint16(device_id);
     message.addTemperature(temperature);
     message.addHumidity(humidity);
