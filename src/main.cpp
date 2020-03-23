@@ -37,7 +37,7 @@ int main(void)
     pc.printf("[Sleep-Mode-Test] Sending message ...\r\n");
     // Implementing standby mode (warm start - radio config is saved - higher currect draw - 600nA)
     node.send(message.getMessage(), message.getLength());
-    pc.printf("[Sleep-Mode-Test] [%d:%d:%d] Going to standby mode (warm start) ...\r\n",(1 + ltm->tm_hour), (1 + ltm->tm_min), (1 + ltm->tm_sec));
+    pc.printf("[Sleep-Mode-Test] Going to standby mode (warm start) ...\r\n");
     pc.printf("[Sleep-Mode-Test] Theoretical current draw: 600nA ...\r\n");
     wait(1); // Seems not to work without this
     node.warm_start();
@@ -46,7 +46,7 @@ int main(void)
     pc.printf("[Sleep-Mode-Test] Sending message ...\r\n");
     // Implementing sleep mode (cold start - radio config is not saved - lower current draw - 160nA)
     node.send(message.getMessage(), message.getLength());
-    pc.printf("[Sleep-Mode-Test] [%d:%d:%d] Going to sleep mode (cold start) ...\r\n",(1 + ltm->tm_hour), (1 + ltm->tm_min), (1 + ltm->tm_sec));
+    pc.printf("[Sleep-Mode-Test] Going to sleep mode (cold start) ...\r\n");
     pc.printf("[Sleep-Mode-Test] Theoretical current draw: 160nA ...\r\n");
     wait(1); // Seems not to work without this
     node.cold_start();
