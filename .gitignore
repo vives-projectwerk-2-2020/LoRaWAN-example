@@ -3,6 +3,7 @@ mbed_settings.pyc
 mbed-lorawan-serialization/
 mbed-os/
 mbed-Simple-LoRaWAN/
+AmbiantSensorMessage/
 
 BUILD/
 
