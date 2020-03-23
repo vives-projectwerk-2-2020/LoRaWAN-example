@@ -8,6 +8,7 @@ No other sensors have to be connected, arbitrary values are used.
 2. `cd LoRaWAN-example`
 2. `git checkout sleep-modes`
 3. `mbed deploy`
+3. use the `settings.example.h` file to create your custom `settings.h` file (contact Maxim to be added as a project collaborator to the TTN application)
 4. `mbed compile -f` (with nucleo board connected)
 
 ## How to setup a new project
